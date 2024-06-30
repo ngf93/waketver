@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+$bg-color: #ffffff;
+$transition: 300ms ease-in;
+$radius: 15px;
+$font-color: #272727;
+$color-0: #054159;
+$color-1: #03588C;
+$color-2: #0378A6;
+$color-3: #049DBF;
+$color-4: #88DFF2;
+$color-5: #f0f8ff;
+$color-6: #f2f2f2;
+
+$bp-xxl: 1399.98px;
+$bp-xl: 1199.98px;
+$bp-lg: 991.98px;
+$bp-md: 767.98px;
+$bp-sm: 575.98px;
+
+:root {
+    --h-height: 100px;
+    --f-height: 200px;
+    --font-color: #272727;
+    --color-0: #054159;
+    --color-1: #03588C;
+    --color-2: #0378A6;
+    --color-3: #049DBF;
+    --color-4: #88DFF2;
+    --color-5: #f0f8ff;
+    --color-6: #f2f2f2;
+    @media (max-width: $bp-lg) {
+        --h-height: 70px;
+    }
+    @media (max-width: $bp-md) {
+        --f-height: 500px;
+    }
+    @media (max-width: $bp-sm) {
+        --h-height: 50px;
+        --f-height: 480px;
+    }
+}
+
+/* mixins */
+@mixin flex($dir: row, $x: center, $y: center, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $x;
+    align-items: $y;
+    flex-wrap: $wrap;
+}
+@mixin no-appearance {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    outline: none;
+}
+@mixin safariFix {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    isolation: isolate;
+    transform: translateZ(0);
+}
+@mixin clamp($count, $line, $strict: false) {
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: $line;
+    @if $strict {
+       height: $line * $count;
+    } @else {
+       max-height: $line * $count;
+    }
+}
+@mixin list {
+    list-style: none;
+    padding-left: 0px;
+}
+@mixin placeholder($color, $fw: 400){
+    &:-moz-placeholder, &::-moz-placeholder,
+    &::-webkit-input-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
+      color: $color;
+      font-weight: $fw;
+    }
+    &::placeholder {
+      color: $color;
+      font-weight: $fw;
+    }
+}
+
+/* Typography */
+a, a:hover, a:focus, a:active {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color $transition;
+}
+h1, h2, h3, h4, h5, h6, p, label, span, a, button, form, fieldset, legend, select, input, textarea, button, div, blockquote, cite, figure, figcaption, table, ul, ol, dl, li, address {
+    line-height: 120%;
+    margin-bottom: 0px;
+}
+h1 {
+    font-size: 3em;
+    font-weight: 500;
+    color: $color-1;
+    text-align: left;
+    margin-bottom: .5em;
+}
+h2 {
+    color: $color-0;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: .5em;
+}
+h3 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 0em;
+}
+h4 {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: .5em;
+}
+h5 {
+    font-size: 1.25em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: .5em;
+}
+h6 {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: .5em;
+}
+.color-1 {color: var(--color-1);}
+.color-2 {color: var(--color-2);}
+.color-3 {color: var(--color-3);}
+.color-4 {color: var(--color-4);}
+.color-5 {color: var(--color-5);}
+.fs {
+    &-08 {font-size: 0.8em;}
+    &-10 {font-size: 1em;}
+    &-11 {font-size: 1.1em;}
+    &-12 {font-size: 1.2em;}
+    &-13 {font-size: 1.3em;}
+    &-14 {font-size: 1.4em;}
+    &-15 {font-size: 1.5em;}
+    &-16 {font-size: 1.6em;}
+    &-17 {font-size: 1.7em;}
+    &-18 {font-size: 1.8em;}
+    &-19 {font-size: 1.9em;}
+    &-20 {font-size: 2em;}
+    &-25 {font-size: 2.5em;}
+    &-30 {font-size: 3em;}
+    &-35 {font-size: 3.5em;}
+    &-40 {font-size: 4em;}
+}
+
+button {
+    background: none;
+    border: none;
+    padding: unset;
+    display: block;
+    font-family: inherit;
+    outline: none;
+    color: inherit;
+}
+
+html {scroll-behavior: smooth;}
+body {
+    font-size: 16px;
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    color: $font-color;
+    @media (max-width: $bp-sm) {
+        font-size: 14px;
+    }
+}
+
+header {
+    height: var(--h-height);
+    background-color: $color-5;
+    nav {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            @include list();
+            display: flex;
+            li {
+                &:not(:first-child) {
+                    margin-left: 2em;
+                }
+                a {
+                    font-weight: 500;
+                    font-size: 1.3em;
+                    &:hover, &:focus {
+                        color: $color-2;
+                    }
+                    &:active {
+                        color: $color-3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mainScreen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-text {
+        width: 40%;
+    }
+    &-grid {
+        width: 52%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 150px);
+        gap: $radius;
+        grid-template-areas: "item1 item1 item1 item1 item1 item2 item2 item2 item3 item3 item3 item3"
+        "item4 item4 item4 item4 item5 item5 item5 item5 item3 item3 item3 item3"
+        "item6 item6 item6 item6 item6 item6 item6 item7 item7 item7 item7 item7";
+        &-item1{
+            grid-area: item1;
+        }
+        &-item2{
+            grid-area: item2;
+        }
+        &-item3{
+            grid-area: item3;
+        }
+        &-item4{
+            grid-area: item4;
+        }
+        &-item5{
+            grid-area: item5;
+        }
+        &-item6{
+            grid-area: item6;
+        }
+        &-item7{
+            grid-area: item7;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $radius;
+            @include safariFix();
+        }
+    }
+}
+
+.plus {
+    background-color: var(--color-3);
+    border-radius: $radius;
+    padding: 1em;
+    height: 100%;
+    color: white;
+    @include flex(row, flex-start, center, nowrap);
+    img {
+        width: 70px;
+        margin-right: 1em;
+    }
+    &.color-1 {
+        background-color: var(--color-1);
+    }
+    &.color-2 {
+        background-color: var(--color-2);
+    }
+}
+
+.priceList {
+    background: url(../imgs/bgWave.jpg) no-repeat center;
+    background-size: cover;
+    padding: 3em 0em;
+    .tab {
+        &-list {
+            
+            li {
+                &:not(:first-child){
+                    margin-top: 1em;
+                }
+            }
+            button {
+                display: block;
+                background-color: transparent;
+                border-radius: $radius 0px 0px $radius;
+                width: 100%;
+                font-size: 1.2em;
+                font-weight: 600;
+                padding: .5em 1em;
+                text-align: left;
+                transition: $transition;
+                transition-property: color, background-color;
+                &:hover, &:focus {
+                    color: var(--color-2);
+                }
+                &.active {
+                    background-color: #fff;
+                    color: var(--color-2);
+                }
+            }
+        }
+        &-content {
+            background-color: #fff;
+            padding: 1.5em 2em;
+            height: 100%;
+            border-radius: 0px $radius $radius 0px;
+            ol {
+                font-size: 1.1em;
+                font-weight: 500;
+                li {
+                    @include flex(row, space-between, baseline, nowrap);
+                    &:not(:first-child){
+                        margin-top: 1em;
+                    }
+                    div {
+                        white-space: nowrap;
+                        &:last-child{
+                            font-weight: 700;
+                            color: var(--color-2);
+                        }
+                    }
+                    hr {
+                        width: 100%;
+                        margin: 0px 1em;
+                        border-top: 1px dotted var(--color-4);
+                        opacity: 1;
+                    }
+                }
+            }
+            ul {
+                font-size: 1.1em;
+                font-weight: 500;
+                @include list();
+                li {
+                    &::before {
+                        content: "✔ ";
+                        color: var(--color-3);
+                    }
+                    &:not(:first-child){
+                        margin-top: .5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.swiper {
+    --swiper-theme-color: var(--color-3);
+    position: static;
+    padding-bottom: 3em;
+    &-slide {
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: $radius;
+        }
+    }
+    &-button {
+        &-prev, &-next {
+            top: calc((100% - 3em)/2);
+            margin-top: 0px;
+            transform: translateY(-50%);
+            width: auto;
+            height: auto;
+            &::after {
+                font-size: 1.75em;
+                font-weight: 700;
+                &:hover {
+                    color: var(--color-2);
+                }
+            }
+        }
+        &-prev {
+            left: -1.5em;
+        }
+        &-next {
+            right: -1.5em;
+        }
+    }
+}
+
+footer {
+    height: var(--h-height);
+    background-color: $color-6;
+}

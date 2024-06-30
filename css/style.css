@@ -1,0 +1,399 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+:root {
+  --h-height: 100px;
+  --f-height: 200px;
+  --font-color: #272727;
+  --color-0: #054159;
+  --color-1: #03588C;
+  --color-2: #0378A6;
+  --color-3: #049DBF;
+  --color-4: #88DFF2;
+  --color-5: #f0f8ff;
+  --color-6: #f2f2f2;
+}
+@media (max-width: 991.98px) {
+  :root {
+    --h-height: 70px;
+  }
+}
+@media (max-width: 767.98px) {
+  :root {
+    --f-height: 500px;
+  }
+}
+@media (max-width: 575.98px) {
+  :root {
+    --h-height: 50px;
+    --f-height: 480px;
+  }
+}
+
+/* mixins */
+/* Typography */
+a, a:hover, a:focus, a:active {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 300ms ease-in;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, span, a, button, form, fieldset, legend, select, input, textarea, button, div, blockquote, cite, figure, figcaption, table, ul, ol, dl, li, address {
+  line-height: 120%;
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 500;
+  color: #03588C;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: #054159;
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 2em;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 0em;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+h6 {
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+.color-1 {
+  color: var(--color-1);
+}
+
+.color-2 {
+  color: var(--color-2);
+}
+
+.color-3 {
+  color: var(--color-3);
+}
+
+.color-4 {
+  color: var(--color-4);
+}
+
+.color-5 {
+  color: var(--color-5);
+}
+
+.fs-08 {
+  font-size: 0.8em;
+}
+.fs-10 {
+  font-size: 1em;
+}
+.fs-11 {
+  font-size: 1.1em;
+}
+.fs-12 {
+  font-size: 1.2em;
+}
+.fs-13 {
+  font-size: 1.3em;
+}
+.fs-14 {
+  font-size: 1.4em;
+}
+.fs-15 {
+  font-size: 1.5em;
+}
+.fs-16 {
+  font-size: 1.6em;
+}
+.fs-17 {
+  font-size: 1.7em;
+}
+.fs-18 {
+  font-size: 1.8em;
+}
+.fs-19 {
+  font-size: 1.9em;
+}
+.fs-20 {
+  font-size: 2em;
+}
+.fs-25 {
+  font-size: 2.5em;
+}
+.fs-30 {
+  font-size: 3em;
+}
+.fs-35 {
+  font-size: 3.5em;
+}
+.fs-40 {
+  font-size: 4em;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: unset;
+  display: block;
+  font-family: inherit;
+  outline: none;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  color: #272727;
+}
+@media (max-width: 575.98px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+header {
+  height: var(--h-height);
+  background-color: #f0f8ff;
+}
+header nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+}
+header nav ul li:not(:first-child) {
+  margin-left: 2em;
+}
+header nav ul li a {
+  font-weight: 500;
+  font-size: 1.3em;
+}
+header nav ul li a:hover, header nav ul li a:focus {
+  color: #0378A6;
+}
+header nav ul li a:active {
+  color: #049DBF;
+}
+
+.mainScreen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainScreen-text {
+  width: 40%;
+}
+.mainScreen-grid {
+  width: 52%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  gap: 15px;
+  grid-template-areas: "item1 item1 item1 item1 item1 item2 item2 item2 item3 item3 item3 item3" "item4 item4 item4 item4 item5 item5 item5 item5 item3 item3 item3 item3" "item6 item6 item6 item6 item6 item6 item6 item7 item7 item7 item7 item7";
+}
+.mainScreen-grid-item1 {
+  grid-area: item1;
+}
+.mainScreen-grid-item2 {
+  grid-area: item2;
+}
+.mainScreen-grid-item3 {
+  grid-area: item3;
+}
+.mainScreen-grid-item4 {
+  grid-area: item4;
+}
+.mainScreen-grid-item5 {
+  grid-area: item5;
+}
+.mainScreen-grid-item6 {
+  grid-area: item6;
+}
+.mainScreen-grid-item7 {
+  grid-area: item7;
+}
+.mainScreen-grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+.plus {
+  background-color: var(--color-3);
+  border-radius: 15px;
+  padding: 1em;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.plus img {
+  width: 70px;
+  margin-right: 1em;
+}
+.plus.color-1 {
+  background-color: var(--color-1);
+}
+.plus.color-2 {
+  background-color: var(--color-2);
+}
+
+.priceList {
+  background: url(../imgs/bgWave.jpg) no-repeat center;
+  background-size: cover;
+  padding: 3em 0em;
+}
+.priceList .tab-list li:not(:first-child) {
+  margin-top: 1em;
+}
+.priceList .tab-list button {
+  display: block;
+  background-color: transparent;
+  border-radius: 15px 0px 0px 15px;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+  transition: 300ms ease-in;
+  transition-property: color, background-color;
+}
+.priceList .tab-list button:hover, .priceList .tab-list button:focus {
+  color: var(--color-2);
+}
+.priceList .tab-list button.active {
+  background-color: #fff;
+  color: var(--color-2);
+}
+.priceList .tab-content {
+  background-color: #fff;
+  padding: 1.5em 2em;
+  height: 100%;
+  border-radius: 0px 15px 15px 0px;
+}
+.priceList .tab-content ol {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.priceList .tab-content ol li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
+.priceList .tab-content ol li:not(:first-child) {
+  margin-top: 1em;
+}
+.priceList .tab-content ol li div {
+  white-space: nowrap;
+}
+.priceList .tab-content ol li div:last-child {
+  font-weight: 700;
+  color: var(--color-2);
+}
+.priceList .tab-content ol li hr {
+  width: 100%;
+  margin: 0px 1em;
+  border-top: 1px dotted var(--color-4);
+  opacity: 1;
+}
+.priceList .tab-content ul {
+  font-size: 1.1em;
+  font-weight: 500;
+  list-style: none;
+  padding-left: 0px;
+}
+.priceList .tab-content ul li::before {
+  content: "✔ ";
+  color: var(--color-3);
+}
+.priceList .tab-content ul li:not(:first-child) {
+  margin-top: 0.5em;
+}
+
+.swiper {
+  --swiper-theme-color: var(--color-3);
+  position: static;
+  padding-bottom: 3em;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 15px;
+}
+.swiper-button-prev, .swiper-button-next {
+  top: calc((100% - 3em) / 2);
+  margin-top: 0px;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+}
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 1.75em;
+  font-weight: 700;
+}
+.swiper-button-prev::after:hover, .swiper-button-next::after:hover {
+  color: var(--color-2);
+}
+.swiper-button-prev {
+  left: -1.5em;
+}
+.swiper-button-next {
+  right: -1.5em;
+}
+
+footer {
+  height: var(--h-height);
+  background-color: #f2f2f2;
+}/*# sourceMappingURL=style.css.map */
