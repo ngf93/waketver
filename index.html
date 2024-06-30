@@ -14,26 +14,37 @@
   <body>
     <header>
         <nav class="container">
-            <h3>WAKETVER</h3>
-            <ul class="list-unstyled mb-0">
-                <li>
-                    <a href="#about">О компании</a>
-                </li>
-                <li>
-                    <a href="#price">Прайс-лист</a>
-                </li>
-                <li>
-                    <a href="#gallery">Галерея</a>
-                </li>
-                <li>
-                    <a href="#contacts">Контакты</a>
-                </li>
-            </ul>
-            <a class="fw-bold fs-15" href="tel:89881692857">8 (988) 169-28-57</a>
+            <h3 class="d-none d-sm-block">WAKETVER</h3>
+            <div class="offcanvas-lg offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasResponsive">
+                <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+                <div class="offcanvas-body">
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#about">О компании</a>
+                        </li>
+                        <li>
+                            <a href="#price">Прайс-лист</a>
+                        </li>
+                        <li>
+                            <a href="#gallery">Галерея</a>
+                        </li>
+                        <li>
+                            <a href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <a class="phone" href="tel:89881692857">8 (988) 169-28-57</a>
+            <button class="btn-menu d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48" d="M88 152h336M88 256h336M88 360h336"></path>
+                </svg>
+            </button>
         </nav>
     </header>
     <main>
-        <section class="container mainScreen my-5">
+        <section class="container mainScreen mt-4 mb-5 my-sm-5 my-5">
             <div class="mainScreen-text">
                 <h1><span class="fs-16">WAKETVER</span> <br/>- организация отдыха&nbsp;на&nbsp;воде</h1>
                 <h4>24/7 мы гoтoвы oрганизовaть для вас нeзабываeмoe и увлeкaтельнoe мeроприятиe пo вaшим пoжeлaниям</h4>
@@ -69,68 +80,68 @@
             <h5>Kомандa WАKЕTVЕR предcтавляeт вам кaтaлoг нaших кaтеpoв и уcлуг.</h5>
             <p class="mb-4">24/7 мы гoтoвы oрганизовaть для вас нeзабываeмoe и увлeкaтельнoe мeроприятиe пo вaшим пoжeлaниям: <strong>рoмaнтический ужин на зaкaте, вечеринкa на вoдe, экскуpcия по горoду, нoчнoe катaние, фoтосeсcия на кaтерe, катание на вейкборде/водных лыжах</strong>, все это и даже больше мы с удовольствием организуем для вас!</p>
             <h5 class="mt-5">Почему выбирают именно нас?</h5>
-            <ul class="list-unstyled row justify-content-center g-4 mb-5">
-                <li class="col-3">
+            <ul class="list-unstyled row justify-content-center g-3 g-xxl-4 mb-5">
+                <li class="col-12 col-md-6 col-lg-4 col-xl-3">
                     <div class="plus color-1">
                         <img src="imgs/icons/boat.svg" alt="катер">
                         <h6>Собственный парк катеров</h6>
                     </div>
                 </li>
-                <li class="col-3">
+                <li class="col-12 col-md-6 col-lg-4 col-xl-3">
                     <div class="plus color-2">
                         <img src="imgs/icons/map.svg" alt="центр города">
                         <h6>Место посадки на катер в центре города</h6>
                     </div>
                 </li>
-                <li class="col-3">
+                <li class="col-12 col-md-6 col-lg-4 col-xl-3">
                     <div class="plus">
                         <img src="imgs/icons/blanket.svg" alt="пледы">
                         <h6>Теплые пледы на борту</h6>
                     </div>
                 </li>
-                <li class="col-3">
+                <li class="col-12 col-md-6 col-xl-3">
                     <div class="plus color-1">
                         <img src="imgs/icons/money.svg" alt="цена">
                         <h6>Низкая цена</h6>
                     </div>
                 </li>
-                <li class="col-4">
+                <li class="col-12 col-md-6 col-xl-4">
                     <div class="plus">
                         <img src="imgs/icons/person.svg" alt="члены экипажа">
                         <h6>Все члены экипажа - профессионалы высокого уровня</h6>
                     </div>
                 </li>
-                <li class="col-4">
+                <li class="col-12 col-md-6 col-xl-4">
                     <div class="plus color-1">
                         <img src="imgs/icons/maintenance.svg" alt="техосмотр">
                         <h6>Все суда лицензированы и прошли своевременное обслуживание и технический осмотр</h6>
                     </div>
                 </li>
-                <li class="col-4">
+                <li class="col-12 col-md-6 col-xl-4">
                     <div class="plus color-2">
                         <img src="imgs/icons/datetime.svg" alt="день и время">
                         <h6>Подача судна в любой удобный день в любое время суток (в т.ч. и ночью)</h6>
                     </div>
                 </li>
-                <li class="col-3">
+                <li class="col-12 col-md-6 col-lg-3">
                     <div class="plus">
                         <img src="imgs/icons/lifevest.svg" alt="Спасательные">
                         <h6>Спасательные средства</h6>
                     </div>
                 </li>
-                <li class="col-3">
+                <li class="col-12 col-md-6 col-lg-3">
                     <div class="plus color-2">
                         <img src="imgs/icons/shield.svg" alt="опыт">
                         <h6>Многолетний опыт</h6>
                     </div>
                 </li>
-                <li class="col-3">
+                <li class="col-12 col-md-6 col-lg-3">
                     <div class="plus">
                         <img src="imgs/icons/thumbup.svg" alt="качество">
                         <h6>Гарантия качества</h6>
                     </div>
                 </li>
-                <li class="col-3">
+                <li class="col-12 col-md-6 col-lg-3">
                     <div class="plus color-1">
                         <img src="imgs/icons/payment.svg" alt="оплата">
                         <h6>Любые способы оплаты</h6>
@@ -145,7 +156,7 @@
             <div class="container">
                 <h2>Прайс-лист</h2>
                 <div class="row gx-0 mb-5">
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <ul class="list-unstyled tab-list" id="myTab" role="tablist">
                             <li role="presentation">
                                 <button class="active" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-selected="true">Аренда катера</button>
@@ -161,7 +172,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-8">
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="tab-1" role="tabpanel">
                                 <ol class="list-unstyled">
@@ -233,46 +244,74 @@
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
-                            <img src="imgs/img1.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img1.jpg">
+                                <img src="imgs/img1.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img2.jpg" alt="вейк">
+                            <a data-fslightbox="gallery" href="imgs/img2.jpg">
+                                <img src="imgs/img2.jpg" alt="вейк">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img3.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img3.jpg">
+                                <img src="imgs/img3.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img4.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img4.jpg">
+                                <img src="imgs/img4.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img5.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img5.jpg">
+                                <img src="imgs/img5.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img6.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img6.jpg">
+                                <img src="imgs/img6.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img7.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img7.jpg">
+                                <img src="imgs/img7.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img8.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img8.jpg">
+                                <img src="imgs/img8.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img9.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img9.jpg">
+                                <img src="imgs/img9.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img10.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img10.jpg">
+                                <img src="imgs/img10.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img11.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img11.jpg">
+                                <img src="imgs/img11.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img12.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img12.jpg">
+                                <img src="imgs/img12.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img13.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img13.jpg">
+                                <img src="imgs/img13.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="imgs/img14.jpg" alt="прогулка на катере">
+                            <a data-fslightbox="gallery" href="imgs/img14.jpg">
+                                <img src="imgs/img14.jpg" alt="прогулка на катере">
+                            </a>
                         </div>
                     </div>
                     <!-- If we need pagination -->
@@ -286,14 +325,14 @@
 
         <section  id="contacts" class="container my-5">
             <h2>Контакты</h2>
-            <div class="row">
-                <div class="col-5">
+            <div class="row g-4">
+                <div class="col-md-5">
                     <h6>Адрес</h6>
                     <address class="mb-4">Тверская обл., г. Тверь, Набережная Михаила Ярославича</address>
                     <h6>Телефон</h6>
                     <a class="d-block" href="tel:89881692857">8 (988) 169-28-57</a>
                 </div>
-                <div class="col-7">
+                <div class="col-md-7">
                     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb1cfb587c9e263c4f431b8cd895f9118a5a8084243904d4c26d364ba6019968&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
                 </div>
             </div>
@@ -301,9 +340,8 @@
     </main>
 
     <footer>
-        <div class="container h-100 d-flex align-items-center justify-content-between">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
             <p>Copyright © <span id="year"></span></p>
-            <p>Сайт разработан </p>
         </div>
     </footer>
     
@@ -311,5 +349,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/sliders.js"></script>
+    <script src="js/fslightbox.js"></script>
   </body>
 </html>
